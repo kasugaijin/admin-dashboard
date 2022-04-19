@@ -3,3 +3,5 @@ This typical user dashboard was built using vanilla CSS grid and flexbox and was
 - a header with a search bar, user greeting, and user buttons/icons;
 - a side panel of links; and, 
 - a main 'card' area that is divided into two - one section shows a card for each project and the other cards for announcements and trending users. 
+
+View live: https://kasugaijin.github.io/admin-dashboard/ 
