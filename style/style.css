@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  color: black;
 }
 
 /* div {
@@ -13,6 +14,8 @@
 .container {
   display: grid;
   grid-template-columns: 250px minmax(1000px, 100%);
+  grid-template-rows: 150px;
+  min-height: 100vh;
 }
 
 .header {
@@ -21,11 +24,9 @@
 
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  /* grid-template-rows: 1fr 1fr; */
+
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 
   border: 1px solid rgb(226, 222, 222);
   box-shadow: 0 0 10px rgba(0,0,0,0.75);
@@ -40,7 +41,7 @@
 
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .search input {
@@ -50,10 +51,6 @@
   height: 1.5rem;
   background-color: rgb(214, 225, 241);
   border: solid 1px grey;
-}
-
-.search input:hover {
-  border: solid 2px grey;
 }
 
 .search img {
@@ -107,17 +104,13 @@
 }
 
 .button {
-  height: 2rem;
-  width: 50%;
+  height: 32px;
+  width: 95px;
   border-radius: 15px;
   border: none;
   background-color: rgb(223, 125, 33);
   font-weight: bold;
   font-size: 1rem;
-}
-
-button:hover {
-  border: solid 2px grey;
 }
 
 .top-right {
@@ -128,7 +121,6 @@ button:hover {
   justify-content: center;
   padding-left: 10%;
   column-gap: 7%;
-  margin-bottom: 15px;
 }
 
 .top-right p {
@@ -150,7 +142,7 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px;
-  padding-top: 10px;
+  padding-top: 23px;
   padding-left: 10px;
 }
 
@@ -201,7 +193,7 @@ button:hover {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
-  padding: 15px;
+  padding: 20px;
 }
 
 #card-heading {
@@ -228,21 +220,62 @@ button:hover {
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 15px;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .card {
 
-  height: 300px;
+  height: 225px;
   background-color: rgb(243, 213, 188);
-  border-radius: 20px;
-  padding: 10px;
-  border: 1px solid rgb(226, 222, 222);
-  border-left: solid 3px rgb(223, 125, 33);
+  border-radius: 10px;
+  padding: 20px;
+  border-left: solid 4px rgb(223, 125, 33);
+  display: flex; 
+  flex-direction: column;
 
 }
 
 .title {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.icons {
+  opacity: 75%;
+  height: 20px;
+  gap: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.icons img {
+  margin-left: auto;
+}
+
+/*Pointers to give feedback despite no actual links*/
+.search input:hover {
+  border: solid 2px black;
+}
+
+button:hover {
+  border: solid 2px black;
+  cursor: pointer;
+}
+
+.dashboard>p:hover, .link-list>p:hover {
+  cursor: pointer;
+  color: rgb(42, 41, 41);
+}
+
+.icons>img:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.card:hover {
+  cursor: pointer;
+  -moz-box-shadow: 0 0 5px 0px rgb(74, 72, 72);
+  -webkit-box-shadow: 0 0 5px 0px rgb(74, 72, 72);
+  box-shadow: 0 0 5px 0px rgb(74, 72, 72);
 }
